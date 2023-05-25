@@ -31,6 +31,7 @@ Location.init(
       type: DataTypes.BOOLEAN,
       hasFood: DataTypes.BOOLEAN,
       hasWifi: DataTypes.BOOLEAN,
+      hasOutlets: DataTypes.BOOLEAN,
       allowNull: false,
     },
     rating: {
