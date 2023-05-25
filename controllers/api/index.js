@@ -3,7 +3,7 @@ const router = require('express').Router();
 
 // Allows use of different paths via controller js files
 // const userRoutes = require('./user-routes');   -----> EXAMPLE'
-const userRoutes = require('./userRoutes');
+const userRoutes = require('./buddyRoutes');
 
 // Uses the js specified above when using the related routes
 // router.use('/users', userRoutes);   -----> EXAMPLE
