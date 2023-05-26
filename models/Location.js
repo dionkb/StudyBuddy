@@ -11,22 +11,22 @@ Location.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     address: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    opening: {
-      type: DataTypes.TIME,
+    name: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
-    closing: {  
-      type: DataTypes.TIME,
-      allowNull: false,
-    },
+    // opening: {
+    //   type: DataTypes.TIME,
+    //   allowNull: false,
+    // },
+    // closing: {  
+    //   type: DataTypes.TIME,
+    //   allowNull: false,
+    // },
     amenities: {
       type: DataTypes.BOOLEAN,
       hasFood: DataTypes.BOOLEAN,
@@ -34,10 +34,10 @@ Location.init(
       hasOutlets: DataTypes.BOOLEAN,
       allowNull: false,
     },
-    rating: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
+    // rating: {
+    //     type: DataTypes.INTEGER,
+    //     allowNull: false,
+    // },
   },
   {
     sequelize,
