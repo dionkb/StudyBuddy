@@ -28,11 +28,13 @@ Location.init(
       allowNull: false,
     },
     amenities: {
-      type: DataTypes.BOOLEAN,
-      hasFood: DataTypes.BOOLEAN,
-      hasWifi: DataTypes.BOOLEAN,
-      hasOutlets: DataTypes.BOOLEAN,
+      type: DataTypes.JSON, // Using JSON data type to store an object
       allowNull: false,
+      defaultValue: {
+        hasFood: false,
+        hasWifi: false,
+        hasOutlets: false,
+      },
     },
     rating: {
         type: DataTypes.INTEGER,
