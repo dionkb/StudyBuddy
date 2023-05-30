@@ -30,4 +30,4 @@ const locationData = [
     "amenities": "WiFi"
   }];
 
-  
+  module.exports = seedLocation;
