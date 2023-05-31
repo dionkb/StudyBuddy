@@ -1,0 +1,24 @@
+{{!-- TODO: Add styling and test --}}
+
+<div>
+    <a href="/location/{{id}}">
+    <div>
+        {{name}}
+    </div>
+    <div>
+        <div>
+            <p>{{address}}</p>
+            <p>{{opening}} - {{closing}}</p>
+            <p>{{amenities.hasFood}}</p>   {{! -- Will I need to use "this.amenities"? }}
+            <p>{{amenities.hasWifi}}</p>
+            <p>{{amenities.hasOutlets}}</p>
+            <p>{{rating}}</p>
+        </div>
+    </div>
+    </a>
+</div>
+<div>
+    <a>View Map</a>  {{! -- Will this work out? }}
+</div>
+
+<hr class="rounded">
