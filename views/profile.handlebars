@@ -1,0 +1,9 @@
+{{!-- TODO: Add styling, js, links, etc. --}}
+{{#if loggedIn}}
+<a>Create New Post</a>
+{{/if}}
+
+{{#each user as |userPost|}}
+{{> user-profile}}
+{{/each}}
+
