@@ -1,7 +1,7 @@
 // Calling config for login to seqeulize via .env file
 const sequelize = require('../config/connection');
-const seedUsers = require('./userData');  
-const seedLocation = require('./LocationData')
+const seedUsers = require('./userData.json');  
+const seedLocation = require('./LocationData.json')
 
 // Code to run various seed files to seed the database
 const seedAll = async () => {
