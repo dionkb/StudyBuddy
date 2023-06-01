@@ -29,5 +29,6 @@ const locationData = [
     "Contact": "(407)-601-1796",
     "amenities": "WiFi"
   }];
-
+  const seedLocation = () => Location.bulkCreate(locationData);
+  
   module.exports = seedLocation;

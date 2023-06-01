@@ -24,5 +24,6 @@ const userData = [
         "password": "H20isgood!"
       }
 ];
+const seedUsers = () => User.bulkCreate(userData);
 
 module.exports = seedUsers;
