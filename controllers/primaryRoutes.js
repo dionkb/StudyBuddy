@@ -28,7 +28,17 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Route for searching locations based on a query
+// Get route to link to Sign-Up page for new users
+router.get('/signup', (req, res) => {
+  // If the user is already logged in, redirect the request to another route
+  if (req.session.logged_in) {
+      res.redirect('/profile');
+      return;
+  }
+  res.render('signup');
+});
+
+// Get route for searching locations based on a query
 router.get('/locations/search', withAuth, async (req, res) => {
   try {
       const { query } = req.query;
