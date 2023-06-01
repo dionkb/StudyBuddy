@@ -2,6 +2,21 @@ const router = require('express').Router();
 const { Location } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+// GET all users for testing purposes
+router.get('/', async (req, res) => {
+  try {
+      const locationData = await Location.findAll({
+          include: [ 
+              // { model: BlogPost, attributes: ['id', 'title', 'body_text', 'user_id', 'createdAt', 'updatedAt'] }, 
+              // { model: Comment, attributes:  ['id', 'body_text', 'user_id', 'blogpost_id', 'createdAt', 'updatedAt']} 
+          ],
+      });
+      res.status(200).json(locationData);
+      } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
 router.post('/', withAuth, async (req, res) => {
   try {
     const newLocation = await Location.create({
