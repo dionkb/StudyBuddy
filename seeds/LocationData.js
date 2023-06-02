@@ -1,4 +1,4 @@
-const {location} = require('../models');
+const {Location} = require('../models');
 
 const locationData = [
 {

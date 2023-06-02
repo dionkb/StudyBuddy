@@ -14,7 +14,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "seeds": "node ./seeds/index.js"
   },
   "name": "studybuddy",
   "description": "Project 2",
