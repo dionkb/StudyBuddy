@@ -1,4 +1,4 @@
-Add notes here as needed (pseudocode, acceptance criteria, grading criteria, etc.)
+Add notes here as needed (pseudocode, acceptance criteria, grading criteria, etc.)   a
 
 ROLES
     JENA
