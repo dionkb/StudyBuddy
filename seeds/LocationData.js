@@ -6,7 +6,7 @@ const locationData = [
     "address": "504 N Alafaya Trail Unit 107 Orlando, FL 32828",
     "name": "Royal Tea",
     "Contact": "(407)-401-9969",
-    "amenities": "WiFi"
+    "amenities": "WiFi",
   }, {
     "address": "1842 Winter Park Rd, Orlando, FL 32803",
     "name": "Stardust Video & Coffee",

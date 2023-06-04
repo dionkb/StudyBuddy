@@ -36,6 +36,13 @@ Location.init(
         hasOutlets: false,
       },
     },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
+    },
     // rating: {
     //     type: DataTypes.INTEGER,
     //     allowNull: false,
