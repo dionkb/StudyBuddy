@@ -46,24 +46,24 @@ MVP:
 
 ACCEPTANCE CRITERIA:
     BACK-END
-        ALREADY INCORPORATED: Use Node.js and Express.js to create a RESTful API.
-        ALREADY INCORPORATED: Use Handlebars.js as the template engine.
-        ALREADY INCORPORATED: Use MySQL and the Sequelize ORM for the database.
-        **NEED: Have both GET and POST routes for retrieving and adding new data.
-        **NEED: Use at least one new library, package, or technology that we haven’t discussed.
-        DONE: Have a folder structure that meets the MVC paradigm.
-        ALREADY PLANNED: Include authentication (express-session and cookies).
-        DONE: Protect API keys and sensitive information with environment variables.
+        COMPLETE: Use Node.js and Express.js to create a RESTful API.
+        COMPLETE: Use Handlebars.js as the template engine.
+        COMPLETE: Use MySQL and the Sequelize ORM for the database.
+        COMPLETE: Have both GET and POST routes for retrieving and adding new data.
+        TODO: Use at least one new library, package, or technology that we haven’t discussed. (TOMTOM API COUNTS)
+        COMPLETE: Have a folder structure that meets the MVC paradigm.
+         COMPLETE: Include authentication (express-session and cookies).
+        TODO: Protect API keys and sensitive information with environment variables. (Completed locally, but will need to use JawsDB link that TA's sent last week)
   
     FRONT-END
-        **NEED: Have a polished UI.
-        **NEED: Be responsive.
-        **NEED: Be interactive (i.e., accept and respond to user input).  
+        TODO: Have a polished UI.
+        TODO: Be responsive.
+        COMPLETE: Be interactive (i.e., accept and respond to user input).  
     
     FINAL
-        Be deployed using Heroku (with data).
-        Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
-        Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
+        TODO: Be deployed using Heroku (with data).
+        COMPLETE: Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
+        TODO: Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
     FUTURE DEVELOPMENT
         Add a random study tip on each reload like Jena said similar to NPM randomizer
