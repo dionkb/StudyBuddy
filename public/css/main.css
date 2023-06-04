@@ -13,13 +13,15 @@ body {
 }
 
 .signup-form{
-display: flex;
+display: flexbox;
+direction: column;
 align-items: center;
 justify-content: center;
 }
 
 .login-form{
-    display: flex;
+    display: flexbox;
+    direction: column;
     align-items: center;
     justify-content: center;
     }

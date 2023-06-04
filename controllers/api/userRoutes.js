@@ -16,13 +16,13 @@ router.get('/', async (req, res) => {
 });
 
 // CREATE new user
-router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
       const dbUserData = await User.create(req.body);
-      console.log(dbUserData);
+
       req.session.save(() => {
           req.session.logged_in = true;
-          req.session.username = dbUserData.username;
+          req.session.email = dbUserData.email;
           req.session.user_id = dbUserData.id;
 
           res.status(200).json(dbUserData);
@@ -62,7 +62,7 @@ router.post('/login', async (req, res) => {
     // Create session variables based on the logged in user
     req.session.save(() => {
       // req.session.user_id = userData.id;
-      req.session.username = userData.username;
+      req.session.email = userData.email;
       req.session.logged_in = true;
       
       res.status(200)
