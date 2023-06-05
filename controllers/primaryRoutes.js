@@ -31,31 +31,31 @@ router.get('/', async (req, res) => {
 // Route for searching locations based on a query
 router.get('/locations', withAuth, async (req, res) => {
   try {
-      const { query } = req.query;
+      // const { query } = req.query;
 
-      const locationData = await Location.findAll({
-        where: {
-          [sequelize.or]: [
-            { name: { [sequelize.like]: `%${query}%` } },
-            { address: { [sequelize.like]: `%${query}%` } },
-            { opening: { [sequelize.like]: `%${query}%` } },
-            { closing: { [sequelize.like]: `%${query}%` } },
-            { amenities: { [sequelize.like]: `%${query}%` } },
-          ],
-        },
-        include: [
-          {
-            model: User,
-            attributes: ['name'],
-          },
-        ],
-        raw: true, // To retrieve raw data instead of Sequelize model instances
-      });
+      // const locationData = await Location.findAll({
+      //   where: {
+      //     [sequelize.or]: [
+      //       { name: { [sequelize.like]: `%${query}%` } },
+      //       { address: { [sequelize.like]: `%${query}%` } },
+      //       { opening: { [sequelize.like]: `%${query}%` } },
+      //       { closing: { [sequelize.like]: `%${query}%` } },
+      //       { amenities: { [sequelize.like]: `%${query}%` } },
+      //     ],
+      //   },
+      //   include: [
+      //     {
+      //       model: User,
+      //       attributes: ['name'],
+      //     },
+      //   ],
+      //   raw: true, // To retrieve raw data instead of Sequelize model instances
+      // });
 
       res.render('locations', {
-        locations: locationData,
+        // locations: locationData,
         logged_in: req.session.logged_in,
-        query
+        // query
       });
     } catch (err) {
       res.status(500).json(err);
@@ -86,23 +86,42 @@ router.get('/locations/:id', withAuth, async (req, res) => {
 });
 
 // Use withAuth middleware to prevent access to route
-router.get('/profile', withAuth, async (req, res) => {
-  try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-    });
+router.get('/profile', withAuth, (req, res) => {
+  let user_id = req.session.user_id;
+  Location.findAll({
+      where: { user_id:  user_id },
+      attribute: ['id', 'address', 'name', 'amenities', 'user_id'], 
+      include: [
+          {
+              model: User,
+              attributes: ['email'],
+          },
+      ],
+      order: [['created_at', 'DESC']],
+  })
+  .then((userPostData) => {
+      const userPosts = userPostData.map((userPost) => userPost.get({ plain: true }));
+      const noPosts = {
+          id: null,
+          name: "You do not have any posted locations",
+          createdAt: new Date(),
+          address: "Add your first location by clicking the 'Recommend a place' button",
+          user_id: user_id,
+      };
+      if (userPosts.length === 0) {
+          userPosts.push(noPosts);
+      };
 
-    const user = userData.get({ plain: true });
-    console.log(user);
-
-    res.render('profile', {
-      ...user,
-      logged_in: true
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+      res.render('profile', { 
+          userPosts,
+          loggedIn: req.session.loggedIn, 
+          email: req.session.email,
+      })  
+  })
+  .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+  });
 });
 
 router.get('/login', (req, res) => {
