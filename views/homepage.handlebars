@@ -1,5 +1,5 @@
-<input type="text" placeholder="Search.."> {{!-- TODO: Add JS to this --}}
-
-{{#each locations as |location|}}
-{{> location-cards}}
-{{/each}}
+<div class="card-deck" style="justify-contents:center;text-align:center;">
+    {{#each locations as |location|}}
+    {{> location-cards}}
+    {{/each}}
+</div>

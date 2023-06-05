@@ -1,24 +1,14 @@
-{{!-- TODO: Add styling and test --}}
-
-<div>
-    <a href="/location/{{id}}">
-    <div>
-        {{name}}
+<div class="card text-center border-custom bg-custom mb-3" style="margin-bottom:5px!important;">
+    <div class="card-header">
+        {{address}}
     </div>
-    <div>
-        <div>
-            <p>{{address}}</p>
-            <p>{{opening}} - {{closing}}</p>
-            <p>{{amenities.hasFood}}</p>   {{! -- Will I need to use "this.amenities"? }}
-            <p>{{amenities.hasWifi}}</p>
-            <p>{{amenities.hasOutlets}}</p>
-            <p>{{rating}}</p>
-        </div>
+    <div class="card-body body-custom">
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">This location has: {{amenities}}</p>
+        <a href="/locations/{{id}}" class="btn btn-dark">View Map</a> {{!--TODO:--}}
     </div>
-    </a>
+    <div class="card-footer">
+        Posted by: {{user.email}}
+    </div>
 </div>
-<div>
-    <a>View Map</a>  {{! -- Will this work out? }}
-</div>
-
-<hr class="rounded">
+<hr> 
