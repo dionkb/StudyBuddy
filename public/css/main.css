@@ -215,15 +215,16 @@ justify-content: center;
     font-family: Noway;
     font-size: 24px;
     padding: 10px;
-    top: 10px;
-    left: 10px;
-    background-color: #C0C0C0;
-    width: 300px;
+    /* top: 10px;
+    left: 10px; */
+    background-color: var(--color-dark-accent);
+    width: 100vw;
     height: 25vh;
     z-index: 1;
-    position: absolute;
-    bottom: 8px;
-    right: 16px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    text-align: center;
 }
 
 .tt-search-box-input-container{
