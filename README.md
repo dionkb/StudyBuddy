@@ -8,7 +8,7 @@
   A user can view different locations around their area to find a place to study. Users are able to search for specific criteria that they need, and they will be shown locations that match. Once a user creates an account, they can also suggest places for other users to check out.
 
   Screenshot or GIF of final output:  
-  TODO: ![screenshot or gif](./ADD THIS LATER!)
+ ![screenshot or gif](assets/Screenshot.jpg)
 
   ## Table of Contents
   * [Dependencies](#dependencies)
@@ -37,7 +37,7 @@
   Follow the link to the deployed application below to get started with this easy-to-use intuitive app
   
   Link to the deployed application:  
-  TODO: ADD THIS LATER!
+  https://evenbetterstudybuddy.herokuapp.com/
 
   ## Additional Information
 
@@ -45,7 +45,7 @@
   Dion Baskara, Qwentin Dobbs, Jena Mussleh, Jhonny Nuñez, Jose Rodriguez
 
   ### Questions
-  For any questions, please reach out to the authors at dionkbaskara@gmail.com, qadobbs@gmail.com, Jmussleh@gmail.com, Njhonny99@gmail.com, josejrod07@gmail.com
+  For any questions, please reach out to the authors at dionkbaskara@gmail.com, qadobbs@gmail.com, Jmussleh@gmail.com, Njhonny99@gmail.com, & josejrod07@gmail.com
 
   ### Contributing
   To help contribute to the project, reach out to me on Github.  
