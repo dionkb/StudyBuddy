@@ -1,6 +1,8 @@
 body {
     --color-primary: #009579;
     --color-primary-dark: #007f67;
+    --color-accent: #C7FCEB;
+    --color-dark-accent: #56CCAD;
     --color-secondary: #252c6a;
     --color-error: #cc3333;
     --color-success: #4bb544;
@@ -25,6 +27,22 @@ justify-content: center;
     align-items: center;
     justify-content: center;
     }
+
+.border-custom{
+    border-color: var(--color-dark-accent) !important;
+}
+
+.bg-custom{
+    background-color: var(--color-dark-accent) !important;
+}
+
+.body-custom{
+    background-color: var(--color-accent) !important;
+}
+
+.card-deck{
+    background-color: var(--color-primary) !important;
+}
 
 .container{
     width: 400px;
@@ -164,3 +182,26 @@ justify-content: center;
       .navbar-nav .nav-link.active {
         color: #007bff;
       }
+
+
+/* ------------ MAP STYLING ------------------- */
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.poi {
+    font-family: Noway;
+    font-size: 24px;
+    padding: 10px;
+    top: 10px;
+    left: 10px;
+    background-color: #C0C0C0;
+    width: 300px;
+    height: 25vh;
+    z-index: 1;
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+}
