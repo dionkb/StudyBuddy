@@ -114,7 +114,7 @@ router.get('/profile', withAuth, (req, res) => {
 
       res.render('profile', { 
           userPosts,
-          loggedIn: req.session.loggedIn, 
+          logged_in: req.session.logged_in, 
           email: req.session.email,
       })  
   })
