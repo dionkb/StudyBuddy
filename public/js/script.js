@@ -6,7 +6,7 @@ let center=[-81.3792,28.5383]
         center: center,
         zoom:10,
         dragpan: true,
-        style: './css/mylightstyle.json'
+        style: './mylightstyle.json'
     })
     
     map.on('click', function(event){
@@ -16,7 +16,7 @@ let center=[-81.3792,28.5383]
         if (touchingLayer.layer.id === 'POI') {
             if(touchingLayer.properties.id) {
             displayPOIInformation(touchingLayer.properties.id)
-            }
+          }
         }
         //Else we hide the POI div
         if(touchingLayer && touchingLayer.layer.id === 'POI') {
