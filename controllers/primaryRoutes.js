@@ -65,22 +65,13 @@ router.get('/locations', withAuth, async (req, res) => {
 // This route is used for retrieving a specific location by its ID.
 router.get('/locations/:id', withAuth, async (req, res) => {
   try {
-    const locationData = await Location.findByPk(req.params.id, {
-      include: [
-        {
-          model: User,
-          attributes: ['name'],
-        },
-      ],
-    });
+    const locationData = await Location.findByPk(req.params.id);
 
     const location = locationData.get({ plain: true });
 
-    res.render('locations', {
-      ...location,
-      logged_in: req.session.logged_in
-    });
+    res.render('locations', { location, loggedIn: req.session.loggedIn });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
@@ -114,7 +105,7 @@ router.get('/profile', withAuth, (req, res) => {
 
       res.render('profile', { 
           userPosts,
-          loggedIn: req.session.loggedIn, 
+          logged_in: req.session.logged_in, 
           email: req.session.email,
       })  
   })
