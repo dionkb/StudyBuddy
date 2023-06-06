@@ -20,7 +20,7 @@
   * [Acknowledgements](#acknowledgements)
   * [Tests](#tests)
 
-  Link to the repository (if needed):  
+  Link to the repository:  
   https://github.com/dionkb/StudyBuddy.git
 
   ## Getting Started
@@ -36,7 +36,7 @@
   ### Executing Program
   Follow the link to the deployed application below to get started with this easy-to-use intuitive app
   
-  Link to the deployed application (if applicable):  
+  Link to the deployed application:  
   TODO: ADD THIS LATER!
 
   ## Additional Information
@@ -45,8 +45,7 @@
   Dion Baskara, Qwentin Dobbs, Jena Mussleh, Jhonny Nuñez, Jose Rodriguez
 
   ### Questions
-  For any questions, please reach out to me at dionkbaskara@gmail.com
-  TODO:
+  For any questions, please reach out to the authors at dionkbaskara@gmail.com, qadobbs@gmail.com, Jmussleh@gmail.com, Njhonny99@gmail.com, josejrod07@gmail.com
 
   ### Contributing
   To help contribute to the project, reach out to me on Github.  
@@ -55,10 +54,10 @@
 
   ### License  
   MIT License: For more information,  <a href="https://opensource.org/license/mit/">click here</a>  
-  See also: LICENSE.md file located within directory (if applicable) 
+  See also: LICENSE.md file located within directory 
 
   ### Acknowledgements
-  N/A
+  TomTom API - Used for a map to display locations to a user
 
   ### Tests
   N/A

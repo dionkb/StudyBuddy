@@ -1,4 +1,8 @@
-Add notes here as needed (pseudocode, acceptance criteria, grading criteria, etc.)   a
+Add notes here as needed (pseudocode, acceptance criteria, grading criteria, etc.)
+
+TODO: 
+    - Add an "Add Location" button to the right of the search bar on locations page 
+    - Deploy to Heroku using JawsDB
 
 ROLES
     JENA
@@ -50,20 +54,20 @@ ACCEPTANCE CRITERIA:
         COMPLETE: Use Handlebars.js as the template engine.
         COMPLETE: Use MySQL and the Sequelize ORM for the database.
         COMPLETE: Have both GET and POST routes for retrieving and adding new data.
-        TODO: Use at least one new library, package, or technology that we haven’t discussed. (TOMTOM API COUNTS)
+        COMPLETE: Use at least one new library, package, or technology that we haven’t discussed. (TOMTOM API COUNTS)
         COMPLETE: Have a folder structure that meets the MVC paradigm.
          COMPLETE: Include authentication (express-session and cookies).
         TODO: Protect API keys and sensitive information with environment variables. (Completed locally, but will need to use JawsDB link that TA's sent last week)
-  
+
     FRONT-END
-        TODO: Have a polished UI.
-        TODO: Be responsive.
+        COMPLETE: Have a polished UI. (Looks good, almost everything we need to function, does)
+        COMPLETE: Be responsive. (Seems to be good everywhere from what I can tell...bootstrap has it defaulted to be pretty responsive)
         COMPLETE: Be interactive (i.e., accept and respond to user input).  
-    
+
     FINAL
         TODO: Be deployed using Heroku (with data).
         COMPLETE: Meet good-quality coding standards (file structure, naming conventions, follows best practices for class/id naming conventions, indentation, quality comments, etc.).
-        TODO: Have a professional README (with unique name, description, technologies used, screenshot, and link to deployed application).
+        TODO: Have a professional README (FIXME: add screenshot, and link to deployed application.)
 
     FUTURE DEVELOPMENT
         Add a random study tip on each reload like Jena said similar to NPM randomizer
